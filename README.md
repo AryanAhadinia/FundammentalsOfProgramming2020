@@ -8,15 +8,15 @@ Alireza Kadivar, Instructor
 
 ### Teaching Assistants
 In Alphabetical Order:
-- [Aryan Ahadinia](https://github.com/AryanAhadinia), Head TA
-- [Baran Bahri](), TA
-- [Parham Chavoshian](), TA
-- [Sadra Daneshvar](), TA
-- [Ali Elyasi](), TA
-- [Soroush Etminan-Bakhsh](), TA
-- [Mohesen Hosseini](), TA
-- [Roxana Khabbaz-Zadeh Moghaddam](), TA
-- [Alireza Mohammadi](), TA
-- [Mohammad Nazari](), TA
-- [Iman Sherkat-Bazzazan](), TA
-- [Neda Taghi-Zadeh](), TA
+- Aryan Ahadinia, Head TA
+- Baran Bahri, TA
+- Parham Chavoshian, TA
+- Sadra Daneshvar, TA
+- Ali Elyasi, TA
+- Soroush Etminan-Bakhsh, TA
+- Mohesen Hosseini, TA
+- Roxana Khabbaz-Zadeh Moghaddam, TA
+- Alireza Mohammadi, TA
+- Mohammad Nazari, TA
+- Iman Sherkat-Bazzazan, TA
+- Neda Taghi-Zadeh, TA
