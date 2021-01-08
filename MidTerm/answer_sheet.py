@@ -1,5 +1,4 @@
 import random
-
 """
 Answer Sheet
 
@@ -106,18 +105,19 @@ def a_complete_circuit_recursive(virgin_edges: list, visited_edges: list,
             new_visited = visited_edges[:]
             new_virgin.remove(e)
             new_visited.append(e)
-            circut = a_complete_circuit_recursive(new_virgin, new_visited,
-                                                  another_node)
-            if len(circut) != 0:
-                return circut
-    return visited_edges
+            after_vigin, after_visited = a_complete_circuit_recursive(
+                new_virgin, new_visited, another_node)
+            if len(after_vigin) == 0:
+                return [], after_visited
+    return virgin_edges, visited_edges
 
 
 def a_complete_circuit(edges: list):
-    if not is_feasible:
+    if not is_feasible(edges):
         return []
-    return a_complete_circuit_recursive(remove_redundant_edges(edges), [],
-                                        edges[0][0])
+    _, circut = a_complete_circuit_recursive(remove_redundant_edges(edges), [],
+                                             edges[0][0])
+    return circut
 
 
 # function argument example
@@ -128,9 +128,28 @@ print(is_connected(edges))  # expected: True
 print(is_feasible(edges))  # expected: True
 print(a_complete_circuit(edges))  # expected: A CIRCUT
 
+edges = [('b', 'c'), ('c', 'e'), ('a', 'c'), ('c', 'e'), ('f', 'a'),
+         ('b', 'd'), ('h', 'e'), ('d', 'c'), ('h', 'c'), ('f', 'c'),
+         ('d', 'h')]
+print(is_connected(edges))  # expected: True
+print(is_feasible(edges))  # expected: False
+print(a_complete_circuit(edges))  # expected: []
+
+edges = [('c', 'e'), ('a', 'c'), ('c', 'e'), ('f', 'a'), ('b', 'd'),
+         ('h', 'e'), ('h', 'c'), ('f', 'c')]
+print(is_connected(edges))  # expected: False
+print(is_feasible(edges))  # expected: False
+print(a_complete_circuit(edges))  # expected: []
+
+edges = [('a', 'c'), ('a', 'b'), ('b', 'c'), ('b', 'd')]
+print(is_connected(edges))  # expected: True
+print(is_feasible(edges))  # expected: False
+print(a_complete_circuit(edges))  # expected: []
+
 ###############################################
 
 # 3. Sale Estimation
+
 
 def get_estimated_customer_count(bound: int, time: int):
     timer = 0
@@ -161,19 +180,23 @@ def get_sell(customers_count: int, pref: dict, prices: dict):
 
 
 def sale_simulate(pref_morning: dict, pref_evening: dict, unit_price: dict):
-    days = 30
+    days = 1000 # Accuracity
     sell = 0
-    for i in range(days):
-        sell += get_sell(get_estimated_customer_count(5, 360), pref_morning, unit_price)
-        sell += get_sell(get_estimated_customer_count(2, 360), pref_evening, unit_price)
+    for _ in range(days):
+        sell += get_sell(get_estimated_customer_count(5, 360), pref_morning,
+                         unit_price)
+        sell += get_sell(get_estimated_customer_count(2, 360), pref_evening,
+                         unit_price)
     return sell * 30 / days
+
 
 # function argument example
 
 pref_morning = {'A': 3, 'B': 2, 'C': 1, 'D': 1}
 pref_evening = {'A': 1, 'B': 2, 'C': 2, 'D': 3}
 unit_price = {'A': 12000, 'B': 10000, 'C': 8000, 'D': 9000}
-print(sale_simulate(pref_morning, pref_evening, unit_price)) # expected: ~150000000
+print(sale_simulate(pref_morning, pref_evening,
+                    unit_price))  # expected: ~150000000
 
 ###############################################
 
@@ -182,6 +205,7 @@ print(sale_simulate(pref_morning, pref_evening, unit_price)) # expected: ~150000
 
 def to_float(val: str):
     return float(val.replace('/', '.'))
+
 
 def test_result(test: dict):
     c = 0
@@ -327,4 +351,4 @@ test_results = {
     }
 }
 
-print(model_accuracy(test_results)) # expected: 0.8
+print(model_accuracy(test_results))  # expected: 0.8
