@@ -18,7 +18,7 @@ In Alphabetical Order:
 - Mohammad Mahdi Hesam, Vice head TA of public relations
 - Mohesen Hosseini, Vice head TA of problem solving classes
 - Roxana Khabbaz-Zadeh Moghaddam, TA
-- Alireza Mohammadi, Vice head TA of Asignments and Quizzez
+- Alireza Mohammadi, Vice head TA of assignments and quizzes
 - Mohammad Nazari, TA
 - Iman Sherkat-Bazzazan, TA
 - Neda Taghi-Zadeh, TA
