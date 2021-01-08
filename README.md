@@ -4,21 +4,21 @@ Fundamentals of Programming, Sharif University of Technology, Fall 2020
 ## People
 
 ### Instructor
-Alireza Kadivar, Instructor
+Alireza Kadivar
 
 ### Teaching Assistants
 In Alphabetical Order:
-- Aryan Ahadinia
-- Farbod Asareh
-- Baran Bahri
-- Parham Chavoshian
-- Sadra Daneshvar
-- Ali Elyasi
-- Soroush Etminan-Bakhsh
-- Mohammad Mahdi Hesam
-- Mohesen Hosseini
-- Roxana Khabbaz-Zadeh Moghaddam
-- Alireza Mohammadi
-- Mohammad Nazari
-- Iman Sherkat-Bazzazan
-- Neda Taghi-Zadeh
+- [Aryan Ahadinia](https://github.com/AryanAhadinia), Head TA
+- Farbod Asareh, TA
+- Baran Bahri, TA
+- Parham Chavoshian, TA
+- Sadra Daneshvar, TA
+- Ali Elyasi, TA
+- Soroush Etminan-Bakhsh, TA
+- Mohammad Mahdi Hesam, Vice head TA of public relations
+- Mohesen Hosseini, Vice head TA of problem solving classes
+- Roxana Khabbaz-Zadeh Moghaddam, TA
+- Alireza Mohammadi, Vice head TA of Asignments and Quizzez
+- Mohammad Nazari, TA
+- Iman Sherkat-Bazzazan, TA
+- Neda Taghi-Zadeh, TA
