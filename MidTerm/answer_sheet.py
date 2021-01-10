@@ -75,7 +75,6 @@ def remove_redundant_edges(edges: list):
 
 
 def is_feasible(edges: list):
-    edges = remove_redundant_edges(edges) # Arbitary
     if not is_connected(edges):
         return False
     for node in node_sets(edges):
