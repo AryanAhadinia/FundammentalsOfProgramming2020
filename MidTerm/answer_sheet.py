@@ -94,7 +94,7 @@ def remove_redundant_edges(edges: list):
     return list(edges_set)
 
 
-def a_complete_circuit_recursive(virgin_edges: list, visited_edges: list,
+def a_complete_circuit_recursive(virgin_edges: list, visited_nodes: list,
                                  current_node: str):
     for e in virgin_edges:
         if current_node in e:
@@ -102,21 +102,22 @@ def a_complete_circuit_recursive(virgin_edges: list, visited_edges: list,
             if e[0] == current_node:
                 another_node = e[1]
             new_virgin = virgin_edges[:]
-            new_visited = visited_edges[:]
+            new_visited = visited_nodes[:]
             new_virgin.remove(e)
-            new_visited.append(e)
+            new_visited.append(another_node)
             after_vigin, after_visited = a_complete_circuit_recursive(
                 new_virgin, new_visited, another_node)
             if len(after_vigin) == 0:
                 return [], after_visited
-    return virgin_edges, visited_edges
+    return virgin_edges, visited_nodes
 
 
 def a_complete_circuit(edges: list):
     if not is_feasible(edges):
         return []
-    _, circut = a_complete_circuit_recursive(remove_redundant_edges(edges), [],
-                                             edges[0][0])
+    edges = remove_redundant_edges(edges)
+    _, circut = a_complete_circuit_recursive(edges, [], edges[0][0])
+    circut.append(circut[0])
     return circut
 
 
@@ -180,7 +181,7 @@ def get_sell(customers_count: int, pref: dict, prices: dict):
 
 
 def sale_simulate(pref_morning: dict, pref_evening: dict, unit_price: dict):
-    days = 1000 # Accuracity
+    days = 1000  # Accuracity
     sell = 0
     for _ in range(days):
         sell += get_sell(get_estimated_customer_count(5, 360), pref_morning,
