@@ -19,14 +19,14 @@ def remove_multiple(L: list) -> list:
     return new_list
 
 
-def is_devidable_by_list(L: list, value: int):
+def is_devidable_by_list(L: list, value: int) -> bool:
     for d in L:
         if value % d == 0:
             return True
     return False
 
 
-def controlled_primes(Lp: list, m: int, n: int):
+def controlled_primes(Lp: list, m: int, n: int) -> list:
     Lp = remove_multiple(Lp)
     l = []
     for i in range(m + 1, n):
