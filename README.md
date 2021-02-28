@@ -16,7 +16,7 @@ In Alphabetical Order:
 - Ali Elyasi, TA
 - Soroush Etminan-Bakhsh, TA
 - Mohammad Mahdi Hesam, Vice head TA of public relations
-- [Mohesen Hosseini](https://github.com/mozshen), Vice head TA of problem solving classes
+- [Mohsen Hosseini](https://github.com/mozshen), Vice head TA of problem solving classes
 - Roxana Khabbaz-Zadeh Moghaddam, TA
 - Alireza Mohammadi, Vice head TA of assignments and quizzes
 - Mohammad Nazari, TA
